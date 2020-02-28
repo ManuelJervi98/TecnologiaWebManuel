@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilosform.css" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section class="formulario">
+            <h2>Formulario</h2>
+            <label>Nombre Completo</label><input class="controls" type="text" name="nombre" id="nombres"
+                placeholder="Ingrese su Nombre" required></label>
+            <label>Correo</label><input class="controls" type="email" name="email" id="email"
+                placeholder="Ingrese su Correo"></label>
+            <label>Telefono<input class="controls" type="tel" name="telefono" id="telefono"
+                    placeholder="Ingrese su telefono" required></label>
+            <label>Codigo Postal<input class="controls" type="password" name="nombre" id="nombres"
+                    placeholder="Ingrese su Nombre" required></label>
+            <label>Fecha<input class="controls" type="date" name="fecha" id="fecha"></label>
+            <label>Tipo de usuario
+                <input list="" name="TypeUser">
+                <datalist id="typeuser">
+                    <option value="Turista Nacional">
+                    <option value="Turista Extrangero">
+                    <option value="Turista Extrangero">
+                </datalist>
+            </label>
+            <label>Lugar del que requiere mas informacion
+                <select name="place">
+                    <option value="">Seleccione Lugar</option>
+                    <option value="La Paz">La Paz</option>
+                    <option value="Cochabamba">Cbba</option>
+                    <option value="Santa Cruz">Santa Cruz</option>
+                </select>
+            </label>
+            <fieldset>
+                <legend>Sexo<em>(Selecione uno)</em></legend>
+                <label><input type="radio" name="sexo" value="Femenino">Femenino</label>
+                <label><input type="radio" name="sexo" value="Masculino">Masculino</label>
+            </fieldset>
+            <script>
+                function alerta()
+                {
+                    alert("GRACIAS POR REGISTRARSE!");
+                }
+            </script>
+            <input class="btn" type="submit" onclick="alerta()" value="Registrar">
+        </section>
+    </main>
+</body>
+
+</html>
