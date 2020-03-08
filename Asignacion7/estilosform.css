@@ -1,14 +1,24 @@
+/*All*/
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-body{
-    background-image: url('fondoFormulario.jpg');
-    background-size: 100vw 100vh;
-    background-attachment: fixed;
-    margin: 0;
+/*Background opacity*/
+.opacity{
+    margin: 0px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    opacity: 0.5;
+    top: 0;
+    z-index: -2;
+}
+
+/*Form*/
+main {
+    position: relative;
 }
 
 .formulario {
@@ -16,7 +26,7 @@ body{
     background: #24303c;
     padding: 30px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 80px;
     border-radius: 4px;
     font-family: 'calibri';
     color: white;

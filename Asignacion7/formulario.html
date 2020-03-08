@@ -5,11 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../Asignacion3/estilos.css" type="text/css">
     <link rel="stylesheet" href="estilosform.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
 <body>
+    
+    <nav class="container">
+        <h1 class="heading">
+            <a href="#">CARNAVAL DE ORURO.COM</a>
+        </h1>
+        <input type="checkbox" name="bar" id="bar">
+        <label for="bar" class="trigger">
+            <i class="fa fa-bars"></i>
+        </label>
+        <ul class="main-menu">
+            <li>
+                <a href="../Asignacion3/principal.html">Inicio</a>
+            </li>
+            <li>
+                <a href="#">Hoteles</a>
+            </li>
+            <li>
+                <a href="#">Lugares</a>
+            </li>
+            <li>
+                <a href="../Asignacion7/formulario.html">Registrarse</a>
+            </li>
+            <li>
+                <a href="#">Galeria</a>
+            </li>
+        </ul>
+    </nav>
+
     <main>
         <section class="formulario">
             <h2>Formulario</h2>
@@ -44,14 +74,14 @@
                 <label><input type="radio" name="sexo" value="Masculino">Masculino</label>
             </fieldset>
             <script>
-                function alerta()
-                {
+                function alerta() {
                     alert("GRACIAS POR REGISTRARSE!");
                 }
             </script>
             <input class="btn" type="submit" onclick="alerta()" value="Registrar">
         </section>
     </main>
+    <div class="opacity"></div>
 </body>
 
 </html>
