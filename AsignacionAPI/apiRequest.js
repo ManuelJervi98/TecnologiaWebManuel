@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //////////// Opcion 3 XMLHttpRequest ////////////////////
     var request = new XMLHttpRequest();
 
-    request.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=Oruro&units=celsius&appid=76fa9eba3db469038ec999a9400a02eb', false);
+    request.open('GET', 'http://api.openweathermap.org/data/2.5/weather?q=Oruro&units=metric&appid=76fa9eba3db469038ec999a9400a02eb', false);
     request.send(); //Hasta aqui envio el request
 
     if (request.status === 200) {
