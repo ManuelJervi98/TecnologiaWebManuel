@@ -11,7 +11,7 @@
     height: 100%;
     position: absolute;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.8;
     top: 0;
     z-index: -2;
 }
@@ -58,3 +58,10 @@ main {
     margin: 16px 0;
     font-size: 16px;
 }
+
+footer {
+    padding: 1% 5%;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+  }

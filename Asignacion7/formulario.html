@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../Asignacion3/estilos.css" type="text/css">
+    <link rel="stylesheet" href="../Asignacion4/estilos.css" type="text/css">
     <link rel="stylesheet" href="estilosform.css" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
 <body>
-    
+
     <nav class="container">
         <h1 class="heading">
             <a href="#">CARNAVAL DE ORURO.COM</a>
@@ -23,19 +23,15 @@
         </label>
         <ul class="main-menu">
             <li>
-                <a href="../Asignacion3/principal.html">Inicio</a>
+                <a href="../Asignacion4/principal.html">Inicio</a>
             </li>
             <li>
-                <a href="#">Hoteles</a>
-            </li>
-            <li>
-                <a href="#">Lugares</a>
-            </li>
+                <a href="https://www.trivago.com/es" target="_blank">Hotel?</a> </li>
             <li>
                 <a href="../Asignacion7/formulario.html">Registrarse</a>
             </li>
             <li>
-                <a href="#">Galeria</a>
+                <a href="../Asignacion5/galeria.html">Galeria</a>
             </li>
         </ul>
     </nav>
@@ -82,6 +78,50 @@
         </section>
     </main>
     <div class="opacity"></div>
+
+    <footer>
+        <div id="timedate">
+            <a id="mon">January</a>
+            <a id="d">1</a>,
+            <a id="y">0</a><br />
+            <a id="h">12</a> :
+            <a id="m">00</a>:
+            <a id="s">00</a>
+        </div>
+
+        <script>
+            //document.write(new Date().getDate()+"/"+(new Date().getMonth()+1) + "/" + new Date().getUTCFullYear());
+
+            Number.prototype.pad = function (n) {
+                for (var r = this.toString(); r.length < n; r = 0 + r);
+                return r;
+            };
+
+            function updateClock() {
+                var now = new Date();
+                var sec = now.getSeconds(),
+                    min = now.getMinutes(),
+                    hou = now.getHours(),
+                    mo = now.getMonth(),
+                    dy = now.getDate(),
+                    yr = now.getFullYear();
+                var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+                var tags = ["mon", "d", "y", "h", "m", "s"];
+                var corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2)];
+
+                for (var i = 0; i < tags.length; i++) {
+                    document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+                }
+            }
+
+            (function initClock() {
+                updateClock();
+
+                // Ejecutar updateClock() en intervalos de 1000 milisegundos
+                window.setInterval("updateClock()", 1000);
+            })() // (....)() auto llamado
+        </script>
+    </footer>
 </body>
 
 </html>

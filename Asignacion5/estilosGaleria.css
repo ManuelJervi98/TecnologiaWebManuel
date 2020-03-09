@@ -7,17 +7,24 @@
     height: 100%;
     position: fixed;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.8;
     top: 0;
     z-index: -2;
 }
 
 /*Gallery*/
 .gallery-container {
+    /*https://flexbox.help/*/
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: center;
 	align-items: stretch;
-	align-content: stretch;
+	align-content: flex-start;
 }
+
+.gallery-container img {
+	margin: 10px;
+}
+
+  

@@ -6,10 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Home</title>
-  <!--Estilos-->
-  <link rel="stylesheet" href="estilos.css" type="text/css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="../AsignacionAPI/estilosClima.css" type="text/css">
+  
   
 </head>
 
@@ -88,63 +85,6 @@
         e Intangible de la Humanidad" por la Unesco el 18 de mayo de 2001</p>
     </div>
   </section>
-
-  <script src="apiRequest.js"></script>
-
-    <!--span class='texto'>Texto</span-->
-
-    <div class="weather-wrapper">
-        <div class="weather-card madrid">
-            <img class="weather-icon" src=""></img>
-            <h1 class="weather-value">0º</h1>
-            <p class="city">Ninguno</p>
-        </div>
-    </div>
-
-  <footer>
-
-    <div id="timedate">
-      <a id="mon">January</a>
-      <a id="d">1</a>,
-      <a id="y">0</a><br />
-      <a id="h">12</a> :
-      <a id="m">00</a>:
-      <a id="s">00</a>
-    </div>
-
-    <script>
-      //document.write(new Date().getDate()+"/"+(new Date().getMonth()+1) + "/" + new Date().getUTCFullYear());
-
-      Number.prototype.pad = function (n) {
-        for (var r = this.toString(); r.length < n; r = 0 + r);
-        return r;
-      };
-
-      function updateClock() {
-        var now = new Date();
-        var sec = now.getSeconds(),
-          min = now.getMinutes(),
-          hou = now.getHours(),
-          mo = now.getMonth(),
-          dy = now.getDate(),
-          yr = now.getFullYear();
-        var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-        var tags = ["mon", "d", "y", "h", "m", "s"];
-        var corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2)];
-
-        for (var i = 0; i < tags.length; i++) 
-        {
-          document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
-        }
-      }
-
-      (function initClock() {
-        updateClock();
-
-        // Ejecutar updateClock() en intervalos de 1000 milisegundos
-        window.setInterval("updateClock()", 1000);
-      })() // (....)() auto llamado
-    </script>
   </footer>
 
 </body>

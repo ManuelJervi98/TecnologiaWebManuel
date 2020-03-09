@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <!--Estilos-->
+  <link rel="stylesheet" href="../Asignacion4/estilos.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+
+<body>
+
+  <script src="../AsignacionAPI/apiRequest.js"></script>
+  <nav class="container">
+    <h1 class="heading">
+      <a href="#">OrurO</a>
+    </h1>
+    <input type="checkbox" name="bar" id="bar">
+    <label for="bar" class="trigger">
+      <i class="fa fa-bars"></i>
+    </label>
+    <ul class="main-menu">
+      <li>
+        <a href="../Asignacion4/principal.html">Inicio</a>
+      </li>
+      <li>
+        <a href="https://www.trivago.com/es" target="_blank">Hotel?</a>
+      </li>
+      <li>
+        <a href="../Asignacion7/formulario.html">Registrarse</a>
+      </li>
+      <li>
+        <a href="../Asignacion5/galeria.html">Galeria</a>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="info-total">
+    <div class="info-container">
+      <img class="info-img" src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583703491/orurorororo_tdjn8r.jpg">
+      <p class="info">El Carnaval de Oruro es un evento folclórico y cultural, así como la máxima representación de los
+        carnavales en Bolivia,
+        “Obra Maestra del Patrimonio Oral e Intangible de la Humanidad” (Unesco). A lo largo del carnaval participan más
+        de 48 conjuntos
+        folklóricos que son distribuidos en 18 especialidades de danzas que reúnen de distintas partes de Bolivia y que
+        realizan su
+        peregrinación hacia el Santuario del Socavón cada sábado de carnaval en la tradicional “Entrada”. Esta
+        celebración, por la gran popularidad
+        que alcanzó en los últimos años y debido a su gran manifestación cultural y atracción turística, pasó a volverse
+        uno de los carnavales
+        más importantes conjuntamente con el de Río de Janeiro, Brasil y otros carnavales en el mundo. Alrededor de 400
+        mil personas visitan anualmente
+        el carnaval, generando un movimiento económico de al menos 125 millones de bolivianos.</p>
+    </div>
+
+    <div class="info-container">
+      <img class="info-img"
+        src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583703370/f800x450-148230_199676_32_bgj4hd.webp">
+      <p class="info">Carnaval de Oruro.Único en el mundo por su sentido religioso. Comienza 40 días antes de la Pascua,
+        con el primer convite en devoción
+        a la Virgen del Socavón, en el que todos los conjuntos visitan el templo donde tiene lugar la ceremonia del
+        permiso y la promesa. A partir de ese
+        acto se intensifican otros como el Calvario, las Veladas de la Virgen y los ensayos de los danzarines. Una
+        semana antes del Carnaval se realiza
+        el segundo convite, con la concentración de todos los conjuntos. El viernes es dedicado en forma tradicional al
+        Convite del "Tío" y se realiza la
+        "Challa" de los parajes mineros.</p>
+    </div>
+
+    <div class="info-container">
+      <img class="info-img"
+        src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583702851/maxresdefault_iuohyb.jpg">
+      <p class="info">La Virgen del Socavón o Virgen de Candelaria es una advocación de la Virgen María que se venera en
+        la ciudad de Oruro, Bolivia.
+        Se celebra el sábado de carnaval, es la patrona de los mineros, además fue declarada "Patrona del Folklore
+        Nacional" por ley de 12 de febrero de 1994.
+        Es venerada particularmente por los mineros, que le agradecen, y le piden que les dé su protección y que no les
+        falten las riquezas minerales en los
+        socavones de las minas. Cada año es visitada el sábado de carnaval por más de cuarenta mil bailarines, que
+        después de haber recorrido más de cinco
+        kilómetros bailando con fe y devoción, terminan pasando de rodillas delante de su imagen. Su fiesta fue
+        reconocido como "Obra Maestra del Patrimonio Oral
+        e Intangible de la Humanidad" por la Unesco el 18 de mayo de 2001</p>
+    </div>
+  </section>
+
+    <div id="timedate">
+      <a id="mon">January</a>
+      <a id="d">1</a>,
+      <a id="y">0</a><br />
+      <a id="h">12</a> :
+      <a id="m">00</a>:
+      <a id="s">00</a>
+    </div>
+
+    <script>
+      //document.write(new Date().getDate()+"/"+(new Date().getMonth()+1) + "/" + new Date().getUTCFullYear());
+
+      Number.prototype.pad = function (n) {
+        for (var r = this.toString(); r.length < n; r = 0 + r);
+        return r;
+      };
+
+      function updateClock() {
+        var now = new Date();
+        var sec = now.getSeconds(),
+          min = now.getMinutes(),
+          hou = now.getHours(),
+          mo = now.getMonth(),
+          dy = now.getDate(),
+          yr = now.getFullYear();
+        var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+        var tags = ["mon", "d", "y", "h", "m", "s"];
+        var corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2)];
+
+        for (var i = 0; i < tags.length; i++) 
+        {
+          document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+        }
+      }
+
+      (function initClock() {
+        updateClock();
+
+        // Ejecutar updateClock() en intervalos de 1000 milisegundos
+        window.setInterval("updateClock()", 1000);
+      })() // (....)() auto llamado
+    </script>
+  </footer>
+
+</body>
+
+</html>

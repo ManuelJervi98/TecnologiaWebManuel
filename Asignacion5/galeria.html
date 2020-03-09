@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Galeria</title>
+  <!--Estilos-->
+  <link rel="stylesheet" href="estilosGaleria.css" type="text/css">
+  <link rel="stylesheet" href="../Asignacion4/estilos.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <nav class="container">
+    <h1 class="heading">
+      <a href="#">OrurO</a>
+    </h1>
+    <input type="checkbox" name="bar" id="bar">
+    <label for="bar" class="trigger">
+      <i class="fa fa-bars"></i>
+    </label>
+    <ul class="main-menu">
+      <li>
+        <a href="../Asignacion4/principal.html">Inicio</a>
+      </li>
+      <li>
+        <a href="https://www.trivago.com/es" target="_blank">Hotel?</a>      </li>
+      <li>
+        <a href="../Asignacion7/formulario.html">Registrarse</a>
+      </li>
+      <li>
+        <a href="../Asignacion5/galeria.html">Galeria</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="gallery-container">
+    <img src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583618354/carnaval-de-oruro-2020-809861_ycswi4.jpg">
+    <img src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583618352/unnamed_txylbl.jpg">
+    <img src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583618352/tmp995689437398564866_xq0gbl.jpg">
+    <img src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583618352/unnamed_2_i440xp.jpg">
+    <img src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583618352/Oruro-03_eearxw.jpg">
+    <img src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583618352/Oruro-Carnival-Bolivia-3_pgteei.jpg">
+    <img src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583618352/unnamed_1_wctgue.jpg">
+    <img src="https://res.cloudinary.com/dwuft1kli/image/upload/v1583618351/monumento_a_la_virgen_del_socavon_720-720x265_lwiqhu.jpg">
+  </div>
+
+  <div class="opacity"></div>
+
+  <footer>
+    <div id="timedate">
+        <a id="mon">January</a>
+        <a id="d">1</a>,
+        <a id="y">0</a><br />
+        <a id="h">12</a> :
+        <a id="m">00</a>:
+        <a id="s">00</a>
+      </div>
+  
+      <script>
+        //document.write(new Date().getDate()+"/"+(new Date().getMonth()+1) + "/" + new Date().getUTCFullYear());
+  
+        Number.prototype.pad = function (n) {
+          for (var r = this.toString(); r.length < n; r = 0 + r);
+          return r;
+        };
+  
+        function updateClock() {
+          var now = new Date();
+          var sec = now.getSeconds(),
+            min = now.getMinutes(),
+            hou = now.getHours(),
+            mo = now.getMonth(),
+            dy = now.getDate(),
+            yr = now.getFullYear();
+          var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+          var tags = ["mon", "d", "y", "h", "m", "s"];
+          var corr = [months[mo], dy, yr, hou.pad(2), min.pad(2), sec.pad(2)];
+  
+          for (var i = 0; i < tags.length; i++) 
+          {
+            document.getElementById(tags[i]).firstChild.nodeValue = corr[i];
+          }
+        }
+  
+        (function initClock() {
+          updateClock();
+  
+          // Ejecutar updateClock() en intervalos de 1000 milisegundos
+          window.setInterval("updateClock()", 1000);
+        })() // (....)() auto llamado
+      </script>
+  </footer>
+</body>
+
+</html>
